@@ -4,18 +4,17 @@ export interface Props {
   name: string;
   enthusiasmLevel?: number;
 }
-
-function Hello({ name, enthusiasmLevel = 1 }): Props {
-  if(enthusiasmLevel <= 0 ) {
-    throw new Error('You could be a little more enthusiasmLevel.: D');
+function Hello({ name, enthusiasmLevel = 1 }: Props) {
+  if (enthusiasmLevel <= 0) {
+    throw new Error('You could be a little more enthusiastic. :D');
   }
   return (
     <div className="hello">
       <div className="greeting">
-        Hellow {name + getExclamationMarks(enthusiasmLevel)}
+        Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>
-  </div>
-  )
+    </div>
+  );
 }
 
 export default Hello;
